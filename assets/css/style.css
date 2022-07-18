@@ -62,7 +62,8 @@ textarea {
 }
 
 .saveBtn {
-  border-left: 1px solid black;
+  border: 0;
+  border-left: 1px solid black !important;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   background-color: #06aed5;
@@ -72,4 +73,18 @@ textarea {
 .saveBtn:hover i {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+.saveBtn:active {
+  background-color: #06bce5;
+}
+
+.planBtn {
+  background-color: #06aed5;
+  color: white;
+  border: solid black 2px;
+}
+
+.planBtn:active {
+  background-color: #06bce5;
 }

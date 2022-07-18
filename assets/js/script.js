@@ -28,7 +28,7 @@ $(document).ready(function () {
                 $(this).removeClass("future");
                 $(this).removeClass("present");
             } else {
-                $(this).addClass("present")
+                $(this).addClass("present");
                 $(this).removeClass("future");
                 $(this).removeClass("past");
             };
@@ -41,6 +41,33 @@ $(document).ready(function () {
         timeBlock();
     }, 1000);
 
+    $(".description").each(function () {
+        var plan = localStorage.getItem($(this).parent().prop("id"));
+
+        if (plan) {
+            $(this).val(plan);
+        };
+    });
+
     dayTime();
     timeBlock();
+
+    $(".saveBtn").click(savePlan);
+
+    $(".planBtn").click(function () {
+        localStorage.clear();
+
+        $(".description").val(null);
+    });
+
 });
+
+function savePlan(event) {
+    event.preventDefault();
+
+    if ($(this).siblings(".description").val()) {
+        localStorage.setItem($(this).parent().prop("id"), $(this).siblings(".description").val());
+    } else {
+        localStorage.removeItem($(this).parent().prop("id"));
+    };
+};
