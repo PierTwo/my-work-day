@@ -88,3 +88,23 @@ textarea {
 .planBtn:active {
   background-color: #06bce5;
 }
+
+@media screen and (max-width: 425px) {
+  .time-block {
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+
+  textarea {
+    border-radius: 0;
+  }
+
+  .planBtn:hover {
+    background-color: #06bce5;
+  }
+
+  .saveBtn:hover {
+    background-color: #06bce5;
+  }
+
+}
