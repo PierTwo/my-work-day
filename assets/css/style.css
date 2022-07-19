@@ -89,6 +89,7 @@ textarea {
   background-color: #06bce5;
 }
 
+/* Media query for smaller screens */
 @media screen and (max-width: 425px) {
   .time-block {
     margin-left: 1px;
